@@ -1,0 +1,2 @@
+# health-tracker
+This is a mobile tracking app for measuring weight and the nutritional intakes. Individuals can create an account and when logged, can add their measurements and preview the amount of the basic nutrients or total amount of energy consumed and burned. This application  is connected to a REST API built with Ruby on Rails. The design of the project is inspired by [Gregoire Vella on Behance](https://www.behance.net/gregoirevella) and can be found [here](https://www.behance.net/gallery/13271423/Bodytrackit-An-iOs-app-Branding-UX-and-UI).
