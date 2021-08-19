@@ -1,4 +1,4 @@
-# TracIT
+# Trac.IT
 
 ![Microverse](https://img.shields.io/badge/-Microverse-6F23FF?style=for-the-badge)
 
@@ -22,7 +22,7 @@ This is a mobile tracking app for measuring weight and the nutritional intakes. 
 
 ## Live Demo
 
-[TracIT]()
+[Trac.IT](https://john-tracker.herokuapp.com/)
 
 
  ## Screenshot
