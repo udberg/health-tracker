@@ -1,4 +1,4 @@
-import { Redirect, useLocation } from 'react-router-dom';
+import { Redirect, useLocation, Link } from 'react-router-dom';
 import { useState } from 'react';
 import { login } from '../logic/sessions';
 import { saveToken } from '../logic/storage';
@@ -12,9 +12,22 @@ const Login = () => {
 
   const signUp = path !== 'login';
   const submitValue = signUp ? 'Sign Up' : 'Login';
-  const endpoint = signUp ? 'users' : 'login';
-  const validatePassword = signUp ? <input className="field m-b-20 background-blue color-white" id="rPassword" type="password" placeholder="reapeat password" /> : <div />;
-  const link = signUp ? <a href="/users/login">Login</a> : <a href="/users/sign-up">Sign Up</a>;
+  const endpoint = signUp ? 'users' : 'sessions';
+  const validatePassword = signUp ? (
+    <input
+      className="field m-b-20 background-blue color-white"
+      id="rPassword"
+      type="password"
+      placeholder="reapeat password"
+    />
+  ) : (
+    <div />
+  );
+  const link = signUp ? (
+    <Link to="/users/login">Login</Link>
+  ) : (
+    <Link to="/users/sign-up">Sign Up</Link>
+  );
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -36,10 +49,25 @@ const Login = () => {
       {redirect}
       {error}
       <form>
-        <input className="field m-b-20 background-blue color-white" id="name" type="text" placeholder="username" />
-        <input className="field m-b-20 background-blue color-white" id="password" type="password" placeholder="password" />
+        <input
+          className="field m-b-20 background-blue color-white"
+          id="name"
+          type="text"
+          placeholder="username"
+        />
+        <input
+          className="field m-b-20 background-blue color-white"
+          id="password"
+          type="password"
+          placeholder="password"
+        />
         {validatePassword}
-        <input className="login-btn background-gray m-b-30" type="submit" value={submitValue} onClick={(e) => handleSubmit(e)} />
+        <input
+          className="login-btn background-gray m-b-30"
+          type="submit"
+          value={submitValue}
+          onClick={(e) => handleSubmit(e)}
+        />
       </form>
       <p>or </p>
       {link}
