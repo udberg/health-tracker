@@ -49,7 +49,7 @@ const Login = () => {
       {redirect}
       {error}
       <form>
-      <input
+        <input
           className="field m-b-20 background-blue color-white"
           id="name"
           type="text"
