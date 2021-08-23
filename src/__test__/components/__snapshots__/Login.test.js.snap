@@ -35,6 +35,7 @@ exports[`Login renders correctly 1`] = `
   </p>
   <a
     href="/users/login"
+    onClick={[Function]}
   >
     Login
   </a>
