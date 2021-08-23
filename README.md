@@ -27,7 +27,7 @@ This is a mobile tracking app for measuring weight and the nutritional intakes. 
 
  ## Screenshot
 
-![img](./public/trac.png)
+![img](./public/trac.pn)
 
 ## Built With 🛠
 
