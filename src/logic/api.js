@@ -7,8 +7,7 @@ const fetchUnits = async (token) => {
     headers: {
       Authorization: `Bearer ${token}`,
     },
-  })
-    .then((r) => r.json());
+  }).then((r) => r.json());
   return response.units;
 };
 
@@ -34,8 +33,7 @@ const fetchAllMeasurements = async (token) => {
     headers: {
       Authorization: `Bearer ${token}`,
     },
-  })
-    .then((r) => r.json());
+  }).then((r) => r.json());
   return response.data;
 };
 
