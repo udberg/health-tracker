@@ -40,7 +40,6 @@ This is a mobile tracking app for measuring weight and the nutritional intakes. 
 
 ## Getting Started
 
-`
 
 - `git clone git@github.com:udberg/health-tracker.git`
 - `cd health-tracker`
@@ -50,7 +49,6 @@ This is a mobile tracking app for measuring weight and the nutritional intakes. 
 To run the tests: 
 - `npm test`
 
-`
 
 ## Contributing
 
