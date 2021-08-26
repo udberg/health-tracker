@@ -22,7 +22,7 @@ This is a mobile tracking app for measuring weight and the nutritional intakes. 
 
 ## Live Demo
 
-[Trac.IT](https://john-tracker.herokuapp.com/)
+[Trac.IT](https://udberg.herokuapp.com/)
 
 
  ## Screenshot
