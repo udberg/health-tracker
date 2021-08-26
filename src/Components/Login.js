@@ -7,6 +7,10 @@ const Login = () => {
   const [redirect, setRedirect] = useState();
   const [error, setError] = useState();
 
+  const [name, setName] = useState('');
+  const [password, setPassword] = useState('');
+  const [rPassword, setrPassword] = useState('');
+
   const location = useLocation();
   const path = location.pathname.split('/')[2];
 
@@ -19,6 +23,8 @@ const Login = () => {
       id="rPassword"
       type="password"
       placeholder="reapeat password"
+      value={rPassword}
+      onChange={(e) => setrPassword(e.target.value)}
     />
   ) : (
     <div />
@@ -31,9 +37,6 @@ const Login = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const name = e.target.parentElement[0].value;
-    const password = e.target.parentElement[1].value;
-    const rPassword = e.target.parentElement[2].value;
     if (signUp && password !== rPassword) return;
     const response = await login(name, password, endpoint);
     if (response.token) {
@@ -54,12 +57,16 @@ const Login = () => {
           id="name"
           type="text"
           placeholder="username"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
         />
         <input
           className="field m-b-20 background-blue color-white"
           id="password"
           type="password"
           placeholder="password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
         />
         {validatePassword}
         <input
